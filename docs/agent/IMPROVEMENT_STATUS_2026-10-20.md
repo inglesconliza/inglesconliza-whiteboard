@@ -42,6 +42,6 @@ Fork/upstream baseline: the only configured remote is `origin` (`https://github.
 
 ## Blockers and next package
 
-Release remains gated on manager review, target binding and branch confirmation, an exact artifact revision, and authenticated live health verification. A real browser smoke for initial load, service-worker replacement, nested-route refresh, and a preserved local drawing is still required before a release claim. Do not infer collaboration readiness from the source tree.
+Release remains gated on manager review, target binding and branch confirmation, an exact artifact revision, and authenticated live health verification. A real browser smoke for initial load, service-worker replacement, nested-route refresh, and a preserved local drawing is still required before a release claim. Do not infer collaboration readiness from the source tree. The accepted push warned that this repository moved to `git@github.com:inglesconliza/inglesconliza-whiteboard.git`; manager review should confirm the canonical remote before later release work.
 
 Stop after WHITEBOARD-01. The manager should review this isolated test package and select the next ordered backlog item. Listmonk activation remains deferred.
