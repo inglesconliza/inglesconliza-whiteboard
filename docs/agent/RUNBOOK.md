@@ -13,6 +13,17 @@ corepack yarn install --ignore-scripts
 VITE_APP_BASE_PATH=/whiteboard/ VITE_APP_DISABLE_SENTRY=true VITE_APP_ENABLE_TRACKING=false VITE_APP_ENABLE_ESLINT=false corepack yarn build
 ```
 
+## Local Worker Runtime Test
+
+Build the app with the whiteboard base path, then run the actual Wrangler asset binding against the built output. This starts Wrangler in local-only mode and does not deploy:
+
+```bash
+VITE_APP_BASE_PATH=/whiteboard/ corepack yarn build:app
+corepack yarn test:worker-runtime
+```
+
+The runtime test checks a nested HTML navigation, a missing JavaScript asset, and `HEAD`/`POST` requests against the local Worker.
+
 ## Deploy
 
 ```bash

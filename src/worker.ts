@@ -49,7 +49,7 @@ export default {
     let response = await env.ASSETS.fetch(new Request(assetUrl, request));
 
     if (response.status === 404 && isHtmlNavigation(request)) {
-      assetUrl.pathname = "/index.html";
+      assetUrl.pathname = "/";
       response = await env.ASSETS.fetch(new Request(assetUrl, request));
     }
 

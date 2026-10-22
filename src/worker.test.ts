@@ -100,7 +100,7 @@ describe("InglesConLiza whiteboard Worker", () => {
 
   it("falls back to the app shell for an HTML navigation, including nested routes", async () => {
     const assets = createAssets((request) =>
-      new URL(request.url).pathname === "/index.html"
+      new URL(request.url).pathname === "/"
         ? new Response("app shell")
         : new Response("missing", { status: 404 }),
     );
@@ -115,7 +115,7 @@ describe("InglesConLiza whiteboard Worker", () => {
     expect(await response.text()).toBe("app shell");
     expect(assets.requests.map(({ url }) => url)).toEqual([
       "https://www.inglesconliza.com/room/lesson-1",
-      "https://www.inglesconliza.com/index.html",
+      "https://www.inglesconliza.com/",
     ]);
   });
 
